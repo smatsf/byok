@@ -1,5 +1,8 @@
 HELP.md
 target/
+certs/
+src/main/resources/*.jks
+src/main/resources/*.yml
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
