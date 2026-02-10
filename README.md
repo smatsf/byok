@@ -146,4 +146,3 @@ View Encrypted Data permissions​
 
 Use the Encryption Policy to enable encryption for selected fields​
 
-Complying with Zero Trust implementation set by HFN Platform 
