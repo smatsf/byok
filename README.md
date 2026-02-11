@@ -33,7 +33,7 @@ significantly impact the platform's ability to function. ​
 Key Availability: Ensure continuous, secure access to the key service (e.g., AWS KMS) to prevent disruptions in encryption/decryption
 operations. ​
 
-Service Latency and Performance: The latency of the key service will become a key factor in the performance of the HFN Platform. ​
+Service Latency and Performance: The latency of the key service will become a key factor in the performance of the application. ​
 
 Compliance Requirements: Verify that the solution meets relevant regulatory and compliance standards for key management and data
 protection.​
@@ -51,14 +51,14 @@ Expiring Key Material ​
 
 Cache Eviction Policy ​
 
-HFN Platform defined policies for triggering cache clearing. 
+Application defined policies for triggering cache clearing. 
 
 EC2 Instance – RHEL instance hosted in AWS Gov Cloud hosting the Cache-Only Key
 Service java application. ​
 
 AWS Autoscaling group – Scheduled scaling policies to scale the EC2 Instance. This is
 needed to make the API highly available and scalable. If it's down for any reason can
-cause performance and high latency for DMACS.​
+cause performance and high latency for application catered solution.​
 
 AWS KMS – Cloud based key management server for generating , storing, and
 managing key material. ​
@@ -88,7 +88,7 @@ Flask API management Services – Tool to host the API for key lifecycle​
 Contains collection of EC2 Instance for autoscaling and high availability
 for key access​
 
-Cache only solution rely heavily on EC2's availability otherwise DMACS
+Cache only solution rely heavily on EC2's availability otherwise catered application
 system comes to halt.​
 
 Health check replacements and scaling policies.​
@@ -116,10 +116,8 @@ FIPS 140-2 compliant​
 Could get pricy over the period if not managed properly
 
 To enable monitoring and auditing of the key management activities undertaken by the
-Salesforce platform, this event would be configured and pushed to the DHA Splunk instance
+Salesforce platform, this event would be configured and pushed to the Splunk instance
 along with Real Time Event Monitoring and Threat Detection Events.  ​
-
-​
 
 HFN KeyManagementEvent– Captures events related to success or failure of a
 callout for key material ​
